@@ -1,4 +1,4 @@
-# Pinturas Muniz
+# Pinturas Gerson
 
 Site profissional de serviços de pintura residencial e comercial.
 
