@@ -40,60 +40,71 @@
         <div class="container">
             <h2 class="section-title">Nossos Serviços</h2>
             <div class="services-grid">
-                <div class="service-card">
+                <div class="service-card" data-service="residencial">
                     <div class="service-icon">🏠</div>
                     <h3>Pintura Residencial</h3>
                     <p>Renovação completa de interiores e exteriores com acabamento impecável</p>
+                    <button class="btn-ver-trabalhos">Ver Trabalhos</button>
                 </div>
-                <div class="service-card">
+                <div class="service-card" data-service="comercial">
                     <div class="service-icon">🏢</div>
                     <h3>Pintura Comercial</h3>
                     <p>Soluções para escritórios, lojas e estabelecimentos comerciais</p>
+                    <button class="btn-ver-trabalhos">Ver Trabalhos</button>
                 </div>
-                <div class="service-card">
+                <div class="service-card" data-service="textura">
                     <div class="service-icon">🎨</div>
                     <h3>Textura e Grafiato</h3>
                     <p>Aplicação de texturas decorativas e revestimentos especiais</p>
+                    <button class="btn-ver-trabalhos">Ver Trabalhos</button>
                 </div>
-                <div class="service-card">
+                <div class="service-card" data-service="decorativa">
                     <div class="service-icon">🖌️</div>
                     <h3>Pintura Decorativa</h3>
                     <p>Efeitos especiais, degradês e pinturas artísticas</p>
+                    <button class="btn-ver-trabalhos">Ver Trabalhos</button>
                 </div>
-                <div class="service-card">
+                <div class="service-card" data-service="reparos">
                     <div class="service-icon">🔧</div>
                     <h3>Reparos e Massa Corrida</h3>
                     <p>Preparação e correção de superfícies antes da pintura</p>
+                    <button class="btn-ver-trabalhos">Ver Trabalhos</button>
                 </div>
-                <div class="service-card">
+                <div class="service-card" data-service="impermeabilizacao">
                     <div class="service-icon">🛡️</div>
                     <h3>Impermeabilização</h3>
                     <p>Proteção contra infiltrações e umidade</p>
+                    <button class="btn-ver-trabalhos">Ver Trabalhos</button>
                 </div>
-                <div class="service-card">
+                <div class="service-card" data-service="portoes">
                     <div class="service-icon">🚪</div>
                     <h3>Pintura de Portões e Grades</h3>
                     <p>Proteção e renovação de portões, grades e estruturas metálicas</p>
+                    <button class="btn-ver-trabalhos">Ver Trabalhos</button>
                 </div>
-                <div class="service-card">
+                <div class="service-card" data-service="telhados">
                     <div class="service-icon">🏠</div>
                     <h3>Pintura de Telhados</h3>
                     <p>Pintura e manutenção de telhas e coberturas</p>
+                    <button class="btn-ver-trabalhos">Ver Trabalhos</button>
                 </div>
-                <div class="service-card">
+                <div class="service-card" data-service="verniz">
                     <div class="service-icon">✨</div>
                     <h3>Aplicação de Verniz</h3>
                     <p>Proteção e acabamento em madeira com verniz de alta qualidade</p>
+                    <button class="btn-ver-trabalhos">Ver Trabalhos</button>
                 </div>
-                <div class="service-card">
+                <div class="service-card" data-service="encanamento">
                     <div class="service-icon">🚰</div>
                     <h3>Encanamento</h3>
                     <p>Instalação e manutenção de sistemas hidráulicos residenciais e comerciais</p>
+                    <button class="btn-ver-trabalhos">Ver Trabalhos</button>
                 </div>
-                <div class="service-card">
+                <div class="service-card" data-service="piso">
                     <div class="service-icon">🔲</div>
                     <h3>Colocação de Piso</h3>
                     <p>Instalação de pisos cerâmicos, porcelanatos e revestimentos</p>
+                    <button class="btn-ver-trabalhos">Ver Trabalhos</button>
                 </div>
             </div>
         </div>
@@ -212,6 +223,14 @@
             <p>&copy; 2024 Pinturas Gerson. Todos os direitos reservados.</p>
         </div>
     </footer>
+
+    <div id="serviceModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2 id="modalTitle">Trabalhos Realizados</h2>
+            <div class="modal-gallery" id="modalGallery"></div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
