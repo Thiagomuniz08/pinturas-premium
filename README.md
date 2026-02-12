@@ -1,4 +1,4 @@
-# Pinturas Premium
+# Pinturas Muniz
 
 Site profissional de serviços de pintura residencial e comercial.
 
