@@ -30,14 +30,36 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    contactForm.addEventListener('submit', function(e) {
+    contactForm.addEventListener('submit', async function(e) {
         e.preventDefault();
         
         const formData = new FormData(contactForm);
+        const button = contactForm.querySelector('button[type="submit"]');
+        const originalText = button.textContent;
         
-        alert('Obrigado pelo contato! Em breve retornaremos sua mensagem.');
+        button.textContent = 'Enviando...';
+        button.disabled = true;
         
-        contactForm.reset();
+        try {
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            });
+            
+            const data = await response.json();
+            
+            if (data.success) {
+                alert('Mensagem enviada com sucesso! Em breve entraremos em contato.');
+                contactForm.reset();
+            } else {
+                alert('Erro ao enviar mensagem. Por favor, tente novamente.');
+            }
+        } catch (error) {
+            alert('Erro ao enviar mensagem. Por favor, tente novamente.');
+        } finally {
+            button.textContent = originalText;
+            button.disabled = false;
+        }
     });
 
     const observerOptions = {
